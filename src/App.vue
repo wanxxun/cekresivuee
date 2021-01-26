@@ -85,7 +85,7 @@ export default {
           body: urlencoded,
         };
         fetch(
-          "https://18.136.21.181:443/cek-tarif-ongkir/front/resi-amp?__amp_source_origin=https%3A%2F%2Fpluginongkoskirim.com",
+          "https://w6nresi.netlify.app:8080/cek-tarif-ongkir/front/resi-amp?__amp_source_origin=https%3A%2F%2Fpluginongkoskirim.com",
           requestOptions
         )
           .then((response) => response.json())
