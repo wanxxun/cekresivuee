@@ -83,6 +83,8 @@ export default {
           method: "POST",
           headers: myHeaders,
           body: urlencoded,
+          mode: 'no-cors',
+          site: 'same-origin',
         };
         fetch(
           "https://pluginongkoskirim.com/cek-tarif-ongkir/front/resi-amp?__amp_source_origin=https%3A%2F%2Fpluginongkoskirim.com",
