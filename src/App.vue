@@ -73,8 +73,11 @@ export default {
       if (e.key == "Enter") {
         this.loading = true;
         var myHeaders = new Headers();
-        myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
-
+        myHeaders.append("Content-Type", "application/json");
+        myHeaders.append("origin", "https://pluginongkoskirim.com");
+        myHeaders.append("referer", "https://pluginongkoskirim.com/cek-resi/");
+        myHeaders.append("Content-Encoding", "gzip");
+        myHeaders.append("Transfer-Encoding", "chunked");
         var urlencoded = new URLSearchParams();
         urlencoded.append("kurir", this.kurir);
         urlencoded.append("resi", this.resi);
@@ -85,7 +88,7 @@ export default {
           body: urlencoded,
         };
         fetch(
-          "https://cors-anywhere.herokuapp.com/https://pluginongkoskirim.com/cek-tarif-ongkir/front/resi-amp?__amp_source_origin=https%3A%2F%2Fpluginongkoskirim.com/",
+          "https://pluginongkoskirim.com/cek-tarif-ongkir/front/resi-amp?__amp_source_origin=https%3A%2F%2Fpluginongkoskirim.com/",
           requestOptions
         )
           .then((response) => response.json())
